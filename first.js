@@ -1,12 +1,8 @@
-/**
- * Created by rips on 12.04.2017.
- */
-console.log("this is new branch js file");
-
-function sumString(x,y) {
-    if (+x && +y) {
-        return ((+x) + (+y)).toString();
-    }
+function add(a, b) {
+    var x = new String(a);
+    var y = new String(b);
+    x.valueOf = function() { return +x[0]};
+    y.valueOf = function() { return +y[0]};
+    return x+y
 }
-console.log(sumString("4", "4"));
-
+console.log(add('1', '2'))
